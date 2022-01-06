@@ -1,5 +1,5 @@
-import { useState } from 'react'
-
+import axios from 'axios'
+import { useState, useEffect} from 'react'
 
 const App = () => {
 
@@ -23,6 +23,13 @@ const App = () => {
         e.preventDefault()
         const { name, descr, number } = contact
         const newContact = { name, descr, number }
+        axios.post('http://localhost:5000/newContact', newContact)
+            .then((res) => {
+                console.log(res)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
         console.log(newContact)
 
     }
