@@ -54,6 +54,17 @@ app.post('/newContact', (req, res) => {
         .catch((err) => res.status(400).json({message: 'Bad request', err}))
 })
 
+app.delete('/delete/:id', (req, res) => {
+    const id = req.params.id
+    Contact.findByIdAndDelete({_id: id}, (req, res, err) => {
+        if(!err) {
+            console.log('Deleted')
+        } else {
+            console.log(err)
+        }
+    })
+})
+
 app.listen(5000, () => {
     console.log('Console log on port 5000...')
 })
