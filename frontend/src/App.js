@@ -58,7 +58,6 @@ const App = () => {
         toast.success('Contact added successfully')
         console.log(newContact)
         getContacts()
-
     }
 
     const deleteContact = (id) => {
