@@ -126,7 +126,7 @@ const App = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {contacts.length > 0 ?  contacts.map((item, index) => {
+                                {contacts.length > 0 ? contacts.map((item, index) => {
                                     return (
                                         <tr key={item._id}>
                                             <th>{index + 1}</th>
@@ -142,22 +142,9 @@ const App = () => {
                                                     className="btn btn-outline-danger">Delete</button>
                                             </th>
                                         </tr>
-                                    
+
                                     )
                                 }) : null}
-                                {/* <tr>
-                                    <th>#1</th>
-                                    <th>Example</th>
-                                    <th>Here is a little example</th>
-                                    <th><a href={`tel: 943698058`}>+998943698058</a></th>
-                                    <th>
-                                        <button
-                                            className="btn btn-outline-warning mx-2">Update</button>
-                                        <button
-                                            className="btn btn-outline-danger">Delete</button>
-                                    </th>
-                                </tr>
-                             */}
                             </tbody>
                         </table>
                     </div>
